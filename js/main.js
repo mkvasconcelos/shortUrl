@@ -1,5 +1,6 @@
 var longUrl = ""
 var shortenUrl = ""
+var img
 
 async function shortUrl() {
     longUrl = $('#myInput').val()
@@ -19,14 +20,13 @@ async function shortUrl() {
     // $('#myOutput').html(data['link'])
 }
 
-function qrCode(url) {
-    let response = fetch('https://api-ssl.bitly.com/v4/bitlinks/' + url + '/qr', {
-        method: 'GET',
-        headers: { "Authorization": "f84843bbbb740bf6f9b1c1c683a515abb00ad6d0" }
-    })
-    let pic = response
-
-    console.log(pic)
+async function qrCode(url) {
+    baseUrl = "https://chart.googleapis.com/chart?"
+    pixels = "chs=250×250"
+    graph = "&cht=qr&chl="
+    img = baseUrl + pixels + graph + url
+    console.log(img)
+    $('#qrCode').attr("src", img);
 }
 
 async function copy() {
