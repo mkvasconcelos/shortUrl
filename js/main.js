@@ -17,16 +17,17 @@ async function shortUrl() {
     shortenUrl = data['id']
     $('#myOutput').val(shortenUrl)
     qrCode(shortenUrl)
-    // $('#myOutput').html(data['link'])
 }
 
 async function qrCode(url) {
-    baseUrl = "https://chart.googleapis.com/chart?"
-    pixels = "chs=250×250"
-    graph = "&cht=qr&chl="
-    img = baseUrl + pixels + graph + url
+    console.log(url)
+    var baseUrl = "https://chart.googleapis.com/chart?cht=qr&chs=300x300&chld=H&chl="
+    var img = baseUrl + url
     console.log(img)
-    $('#qrCode').attr("src", img);
+    $('#qrCode').attr("src", img)
+    $('#qrCodeDownload').attr("href", img)
+    $('#btnCopy,#btnDownload,#myOutput').css("visibility", "visible")
+    $('#btnCopy,#btnDownload,#myOutput').css("visibility", "visible")
 }
 
 async function copy() {
@@ -35,4 +36,3 @@ async function copy() {
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText)
 }
-
