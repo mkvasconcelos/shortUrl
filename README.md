@@ -1,8 +1,8 @@
-# Calculator
+# Short URL
 
 ## About
 <p>
-    It was my fourth front-end project that I developed, I used HTML, CSS and JAVASCRIPT to build a url shortener. 
+    It was my fourth front-end project that I developed, I used HTML, CSS and JAVASCRIPT to build a url shortener consuming bitly and Google Chart API. 
 </p>
 
 <p align="center">
