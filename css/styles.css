@@ -1,5 +1,162 @@
+a {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-decoration: none;
+    height: 200%;
+}
+
+body {
+    margin: auto;
+    background-color: white;
+}
+
+button#btnCopy:hover,
+button#btnDownload:hover {
+    background-color: aquamarine;
+    opacity: 0.8;
+}
+
+button#btnCopy:active,
+button#btnDownload:active {
+    opacity: 1.2;
+}
+
+button#btnShort:hover {
+    background-color: #ab95e3;
+    opacity: 0.8;
+}
+
+button#btnShort:active {
+    opacity: 1.2;
+}
+
+img {
+    border-color: black;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+p {
+    font-weight: bold;
+    font-family: cursive;
+    color: #3A3053
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 10vh;
+}
+
+.div:nth-of-type(1) {
+    align-items: baseline;
+    margin-left: 5%;
+}
+
+.div:nth-of-type(2) {
+    background: linear-gradient(360deg,
+            #F0F1F6 70%,
+            white 10%);
+    height: 40vh;
+}
+
+.div:nth-of-type(3) {
+    height: 40vh;
+    background: linear-gradient(360deg,
+            #C0C0C4 70%,
+            #F0F1F6 10%);
+
+}
+
+.div:nth-of-type(4) {
+    background-color: #969699;
+}
+
+.divInput {
+    margin: auto;
+    border-radius: 10px;
+    padding: 30px 5%;
+    width: 80%;
+    height: 15%;
+    background-color: #3A3053;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divInput:nth-of-type(2) {
+    visibility: hidden;
+    padding: 5px 5%;
+    background-color: white;
+}
+
+.divInput:nth-of-type(3) {
+    visibility: hidden;
+    padding: 5px 5%;
+    background-color: white;
+}
+
+.input {
+    border-radius: 5px;
+    width: 70%;
+    height: 80%;
+    border-style: none;
+    margin-right: 1%;
+}
+
+.btn {
+    border-radius: 5px;
+    width: 20%;
+    height: 80%;
+    background-color: #2BD1D1;
+    color: white;
+    border-style: none;
+}
+
+.link {
+    width: 10%;
+}
+
 #btnCopy,
 #btnDownload,
-#myOutput {
+#myOutput,
+#qrCode {
     visibility: hidden;
+}
+
+#divBtnDld {
+    margin: auto;
+    width: 80%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    .input {
+        font-size: 0.5em;
+    }
+
+    .btn {
+        width: 25%;
+        font-size: 0.5em;
+    }
+
+    .link {
+        width: 10%;
+    }
+
+    .imgLinks {
+        width: 50px;
+    }
 }

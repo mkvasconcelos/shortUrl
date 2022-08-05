@@ -4,6 +4,10 @@ var img
 
 async function shortUrl() {
     longUrl = $('#myInput').val()
+    if (longUrl == "") {
+        alert("Please add a link!")
+        return
+    }
     let headers = {
         "Authorization": "f84843bbbb740bf6f9b1c1c683a515abb00ad6d0",
         "Content-Type": "application/json"
@@ -20,14 +24,11 @@ async function shortUrl() {
 }
 
 async function qrCode(url) {
-    console.log(url)
-    var baseUrl = "https://chart.googleapis.com/chart?cht=qr&chs=300x300&chld=H&chl="
+    var baseUrl = "https://chart.googleapis.com/chart?cht=qr&chs=190x190&chld=H&chl="
     var img = baseUrl + url
-    console.log(img)
     $('#qrCode').attr("src", img)
     $('#qrCodeDownload').attr("href", img)
-    $('#btnCopy,#btnDownload,#myOutput').css("visibility", "visible")
-    $('#btnCopy,#btnDownload,#myOutput').css("visibility", "visible")
+    $('#btnCopy,#btnDownload,#myOutput,#qrCode,.divInput:nth-of-type(2)').css("visibility", "visible")
 }
 
 async function copy() {
@@ -35,4 +36,6 @@ async function copy() {
     var copyText = $("#myOutput").val();
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText)
+    $('#btnCopy').html("Copied!")
+    $('#btnCopy').css("background-color", "aquamarine")
 }

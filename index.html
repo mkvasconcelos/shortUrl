@@ -10,21 +10,36 @@
 </head>
 
 <body>
-    <div>
-        <input class="input-url" id="myInput" type="text" placeholder="Coloque aqui a URL" />
-        <button class="btn" onclick="shortUrl()">Encurtar</button>
+    <div class="div">
+        <p>MKVly</p>
     </div>
-    <div>
-        <input class="input-url" id="myOutput" type="text" />
-        <button class="btn" id="btnCopy" onclick="copy()">Copiar</button>
+    <div class="div">
+        <div class="divInput">
+            <input class="input" id="myInput" type="text" placeholder="Shorten a link here..." />
+            <button class="btn" id="btnShort" onclick="shortUrl()">Shorten It!</button>
+        </div>
+        <div class="divInput">
+            <input class="input" id="myOutput" type="text" />
+            <button class="btn" id="btnCopy" onclick="copy()">Copy</button>
+        </div>
     </div>
-    <div>
-        <img id="qrCode">
+    <div class="div">
+        <div>
+            <img id="qrCode">
+        </div>
+        <div id="divBtnDld">
+            <a id="qrCodeDownload" download="QR-Code">
+                <button class="btn" id="btnDownload" type="button">Download!</button>
+            </a>
+        </div>
     </div>
-    <div>
-        <a id="qrCodeDownload" download="QR-Code">
-            <button id="btnDownload" type="button">Download!</button>
-        </a>
+    <div class="div">
+        <a class="link" href="https://www.linkedin.com/in/mkvasconcelos/"><img class="imgLinks"
+                src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+        <a class="link" href="mailto:mateuskvasconcelos@gmail.com"><img class="imgLinks"
+                src="https://img.shields.io/badge/gmail-D14836?&style=for-the-badge&logo=gmail&logoColor=white" /></a>
+        <a class="link" href="https://github.com/mkvasconcelos"><img class="imgLinks"
+                src="https://img.shields.io/badge/github-%23100000.svg?&style=for-the-badge&logo=github&logoColor=white" /></a>
     </div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
